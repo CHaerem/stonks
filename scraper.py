@@ -41,7 +41,9 @@ conn = sqlite3.connect('financial-database.db')
 
 driver = setup_browser()
 
-url = "https://newsweb.oslobors.no/search?category=1101&issuer=&fromDate=2012-01-01&toDate=2013-01-01&market=XOSL&messageTitle="
+fromDate = "2014-01-01"
+toDate = "2015-01-01"
+url = "https://newsweb.oslobors.no/search?category=1101&issuer=&fromDate=%s&toDate=%s&market=XOSL&messageTitle=" % (fromDate,toDate)
 
 driver.get(url)
 time.sleep(5)
